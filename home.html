@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+            $("#fact1").show();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1> Learn To Code</h1>
+        </header>
+
+        <div class="topnav " id="myTopnav ">
+            <a href="home.html">Home</a>
+            <a href="help.html ">Support</a>
+            <a href="Challenge.html ">Challenge</a>
+            <a href="javascript:void(0); " class="icon " onclick="myFunction() ">
+                <i class="fa fa-bars "></i>
+            </a>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav ");
+                if (x.className === "topnav ") {
+                    x.className += "responsive ";
+                } else {
+                    x.className = "topnav ";
+                }
+            }
+        </script>
+
+        <div class="main">
+            <div id="rightcolum">
+                <h1> Basics of programming:</h1>
+                <p>There is 3 types of programming
+                    <ul>
+                        <li>Machine level language</li>
+                        <li>Assembly Language</li>
+                        <li>High-level Language</li>
+                    </ul>
+                    you will most likely not learn machine language first or assembly language due to its very confusing nature. These are an example of hello world in <a href="https://imgur.com/dgkgkty">Assembly</a> and <a href="https://imgur.com/jXxqbCt">Machine</a>code
+                    <br><br> the general consensus when learning programming is to learn the high level language first one I would personly recommend is <a href="https://www.w3schools.com/java/">Java</a> which will also make learnign c# a breeze. Or if
+                    your up for the challeng u could try learn <a href="https://www.learn-c.org/">C</a> then move onto my favorite <a href="https://www.codecademy.com/catalog/language/c-plus-plus">C++</a>.
+                </p>
+            </div>
+            <div id="leftcolum">
+                <div id="fact1" class="hideDivs">
+                    <img src="imgs/fortrane.png" alt="Fortran " width="100px " height="100px" onmouseover="this.style.width='130%'; this.style.height='130%'" onmouseout="this.style.width='50%'; this.style.height='50%'">
+                    <h2>Fact 1:</h2>
+                    <p> Fortran is the oldest programming language made in 1957 by John Backus,</p>
+                </div>
+                <div id="fact2" class="hideDivs">
+                    <img src="imgs/punchcard.png" alt="punched card" withd="100px" height="100px" onmouseover="this.style.width='130%'; this.style.height='130%'" onmouseout="this.style.width='50%'; this.style.height='50%'">
+                    <h2>Fact 2:</h2>
+                    <p>There was once a point in timw where programming was done physics by punch cards. Punched cards where invented by Herman Hollerith</p>
+                </div>
+                <div id="fact3" class="hideDivs">
+                    <img src="imgs/js-frame.png" alt="js-Frames" withd="100px" height="100px" onmouseover="this.style.width='130%'; this.style.height='130%'" onmouseout="this.style.width='50%'; this.style.height='50%'">
+                    <h2>Fact 3:</h2>
+                    <p>The language with the most frameworks goes to javascript with 24 frameworks. Some of those framewroks include React.js Vue.js Express.js and Jquery the framework being used in this site</p>
+                </div>
+            </div>
+
+            <script>
+                var counter = 1;
+
+                $("#leftcolum").click(function() {
+                    counter += 1;
+                    console.log(counter);
+                    if (counter == 1) {
+                        $("#fact1").animate({
+                            width: "toggle"
+                        });
+                        //$("#fact1").show();
+                        $("#fact2").hide();
+                        $("#fact3").hide();
+                    } else if (counter == 2) {
+                        $("#fact2").animate({
+                            width: "toggle"
+                        });
+                        $("#fact1").hide();
+                        $("#fact3").hide();
+                    } else if (counter == 3) {
+                        $("#fact3").animate({
+                            width: "toggle"
+                        });
+                        $("#fact1").hide();
+                        $("#fact2").hide();
+                        counter = 0;
+                    }
+                });
+            </script>
+</body>
+
+</html>
