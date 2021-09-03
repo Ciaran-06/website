@@ -35,6 +35,30 @@
                 }
             }
         </script>
+
+        <input id="myinput" type="text" value="<script>alert('Danger - I am an evil script!!')</script>" />
+
+        <br />
+        <input id="EncodeBeforeWrite" type="button" value="Encode before Write" />
+        <input id="WriteWithoutEncode" type="button" value="Write without Encode" />
+
+        <div id="myDiv"></div>
+
+        <script>
+            $("#EncodeBeforeWrite").click(function() {
+                var message = $("#myinput").val();
+                //ENCODED FOR MAXIMUM SAFETY
+                var encodedMsg = $('<div />').text(message).html();
+                $('#myDiv').html(encodedMsg);
+            });
+
+            $("#WriteWithoutEncode").click(function() {
+                var message = $("#myinput").val();
+                //No encode!!!
+
+                $('#myDiv').html(message);
+            });
+        </script>
 </body>
 
 </html>

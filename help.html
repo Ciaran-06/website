@@ -45,20 +45,24 @@
             <div id="rightcolum">
                 <h1> Help Form:</h1>
                 <form action="https://formspree.io/f/xqkwwbrq" method="POST">
-                <input type="text" name="frstName" placeholder="forename">
-                <input type="text" name="lstName" placeholder="surname">
-                <input type="text" name="email" placeholder="email">
-                <input type="text" name="lang" placeholder="language">
-                    <input type="submit" value="submit">
+                    <input type="text" name="frstName" placeholder="forename">
+                    <input type="text" name="lstName" placeholder="surname">
+                    <input type="text" name="email" placeholder="email">
+                    <input type="text" name="lang" placeholder="language">
+                    <input type="submit" value="Submit">
                 </form>
             </div>
             <div id="leftcolum">
-                <form>
-                    <input type="text" name="frstName" placeholder="forename">
-                    <input type="text" name="lstName" placeholder="surname">
-                </form>
             </div>
 
+            <script>
+                $("#EncodeBeforeWrite").click(function() {
+                    var message = $("#myinput").val();
+                    //ENCODED FOR MAXIMUM SAFETY
+                    var encodedMsg = $('<div />').text(message).html();
+                    $('#myDiv').html(encodedMsg);
+                });
+            </script>
             <script>
                 var counter = 1;
 
