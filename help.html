@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -45,10 +46,11 @@
             <div id="rightcolum">
                 <h1> Help Form:</h1>
                 <form action="https://formspree.io/f/xqkwwbrq" method="POST">
-                    <input type="text" name="frstName" placeholder="forename">
+                    <input type="text" name="frstName" placeholder="forename" id="EncodeBeforeWrite">
                     <input type="text" name="lstName" placeholder="surname">
                     <input type="text" name="email" placeholder="email">
                     <input type="text" name="lang" placeholder="language">
+                    <input type="tel" name="phone" placeholder="phone">
                     <input type="submit" value="Submit">
                 </form>
             </div>
